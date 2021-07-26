@@ -9,6 +9,8 @@
 </head>
 <body onload="list_services();">
     <h1>Check Services for Username</h1>
+    <p><span style="color: red; font-weight: bold;">Make sure you allow pop-ups from this site</span></p>
+
     <h2>Search for Username</h2>
     <form onsubmit="return showAccounts();">
         <input id="username_field" type="text" name="username" id="username" placeholder="username">
@@ -16,6 +18,7 @@
     </form>
 
     <h2>Currently Supported Sites</h2>
+    <p>Uncheck to disable search on that service.</p>
     <ul id="service_list">
     </ul>
 

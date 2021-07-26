@@ -8,13 +8,29 @@ let services = {
     myspace: 'https://myspace.com/{NAME}',
     dailymotion: 'https://www.dailymotion.com/{NAME}',
     steam: 'https://steamcommunity.com/id/{NAME}',
-    twitter: 'https://twitter.com/{NAME}'
+    twitter: 'https://twitter.com/{NAME}',
+    vsco: 'https://vsco.co/{NAME}/gallery',
+    pinterest: 'https://www.pinterest.ca/{NAME}',
+    instagram: 'https://instagram.com/{NAME}/',
+    ebay: 'https://www.ebay.com/usr/{NAME}',
+    reddit: 'https://reddit.com/user/{NAME}'
 }
 
 function list_services(){
     for (let key in services) {
         let li = document.createElement('li');
-        li.innerText = key;
+
+        let check = document.createElement('input');
+        check.type = 'checkbox';
+        check.id = key + '_check';
+        check.checked = true;
+
+        let text = document.createTextNode(key);
+
+        li.appendChild(check);
+        li.appendChild(text);
+
+
         document.getElementById('service_list').appendChild(li);
     }
 }
@@ -22,7 +38,10 @@ function list_services(){
 
 function account_search(username){
     for (let key in services) {
-        window.open(services[key].replace('{NAME}', username));
+        if(document.getElementById(key + '_check').checked){
+            window.open(services[key].replace('{NAME}', username));
+
+        }
     }
 }
 
