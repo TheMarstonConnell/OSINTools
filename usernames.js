@@ -13,7 +13,12 @@ let services = {
     pinterest: 'https://www.pinterest.ca/{NAME}',
     instagram: 'https://instagram.com/{NAME}/',
     ebay: 'https://www.ebay.com/usr/{NAME}',
-    reddit: 'https://reddit.com/user/{NAME}'
+    reddit: 'https://reddit.com/user/{NAME}',
+    gravatar: 'http://gravatar.com/{NAME}',
+    smule: 'https://smule.com/{NAME}',
+    tumblr: 'https://{NAME}.tumblr.com',
+    wordpress: 'https://{NAME}.wordpress.com',
+
 }
 
 function list_services(){
