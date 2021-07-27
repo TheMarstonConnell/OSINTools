@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="multinames.js"></script>
+    <title>Account Finder</title>
+</head>
+<body onload="list_services();">
+    <h1>Check Service for Usernames</h1>
+    <p><span style="color: red; font-weight: bold;">Make sure you allow pop-ups from this site</span></p>
+
+    <h2>Search for Usernames (One per Line)</h2>
+    <form onsubmit="return showAccounts();">
+        <textarea id="username_field" type="text" name="username" id="username"></textarea>
+        <input type="submit" value="Search">
+    </form>
+
+    <h2>Choose Supported Site</h2>
+    <ul id="service_list">
+    </ul>
+
+    <p>Make a pull request on github to add or update a service!</p>
+    <a href="https://github.com/TheMarstonConnell/OSINTools">GitHub</a>
+</body>
+</html>

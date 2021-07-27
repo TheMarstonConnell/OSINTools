@@ -33,7 +33,8 @@ function list_services(){
         let li = document.createElement('li');
 
         let check = document.createElement('input');
-        check.type = 'checkbox';
+        check.type = 'radio';
+        check.name = 'services'
         check.id = key + '_check';
         check.checked = true;
 
@@ -59,8 +60,14 @@ function account_search(username){
 
 function showAccounts(){
     let search = document.getElementById('username_field');
-    let name = search.value;
-    account_search(name);
-    search.value = '';
+
+    let lines = search.value.split('\n');
+
+    for(let j in lines){
+        let name = lines[j];
+        account_search(name);
+
+    }
+
     return false;
 }
